@@ -1,0 +1,3 @@
+﻿  Data_Structure.c
+C:\Users\HOSEO\Desktop\HOSEO_UNIV\자료구조\Study_files\Data_Structures\Data_Structures\Data_Structure.c(7,2): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
+  Data_Structures.vcxproj -> C:\Users\HOSEO\Desktop\HOSEO_UNIV\자료구조\Study_files\Data_Structures\x64\Debug\Data_Structures.exe
