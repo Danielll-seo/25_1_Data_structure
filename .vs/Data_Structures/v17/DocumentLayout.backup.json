@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HOSEO\\Desktop\\HOSEO_UNIV\\\uC790\uB8CC\uAD6C\uC870\\Study_files\\25_1_Data_structure\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C53B73B8-B8C8-4F55-933C-EAACDEC589EE}|Data_Structures\\Data_Structures.vcxproj|C:\\Users\\HOSEO\\Desktop\\HOSEO_UNIV\\\uC790\uB8CC\uAD6C\uC870\\Study_files\\25_1_Data_structure\\Data_Structures\\Data_Structure.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C53B73B8-B8C8-4F55-933C-EAACDEC589EE}|Data_Structures\\Data_Structures.vcxproj|solutionrelative:Data_Structures\\Data_Structure.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Data_Structure.c",
+              "DocumentMoniker": "C:\\Users\\HOSEO\\Desktop\\HOSEO_UNIV\\\uC790\uB8CC\uAD6C\uC870\\Study_files\\25_1_Data_structure\\Data_Structures\\Data_Structure.c",
+              "RelativeDocumentMoniker": "Data_Structures\\Data_Structure.c",
+              "ToolTip": "C:\\Users\\HOSEO\\Desktop\\HOSEO_UNIV\\\uC790\uB8CC\uAD6C\uC870\\Study_files\\25_1_Data_structure\\Data_Structures\\Data_Structure.c",
+              "RelativeToolTip": "Data_Structures\\Data_Structure.c",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-04-09T15:48:41.446Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
