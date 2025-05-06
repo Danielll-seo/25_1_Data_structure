@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="20240969_intro_report.c">
+    <ClCompile Include="20240969_intro_report1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20240969_array_report1.c">
