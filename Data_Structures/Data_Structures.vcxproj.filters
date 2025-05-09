@@ -30,5 +30,8 @@
     <ClCompile Include="20240969_stack_report1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20240969_stack_report2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
