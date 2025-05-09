@@ -1,3 +1,2 @@
-﻿  20240969_array_report2.c
-C:\Users\HOSEO\Desktop\HOSEO_UNIV\자료구조\Study_files\25_1_Data_structure\Data_Structures\20240969_array_report2.c(24,11): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  20240969_stack_report1.c
   Data_Structures.vcxproj -> C:\Users\HOSEO\Desktop\HOSEO_UNIV\자료구조\Study_files\25_1_Data_structure\x64\Debug\Data_Structures.exe
