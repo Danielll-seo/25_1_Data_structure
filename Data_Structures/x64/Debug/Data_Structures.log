@@ -1,2 +1,3 @@
-﻿  20240969_stack_report2.c
+﻿  20240969_SingleLL_report1.c
+C:\Users\HOSEO\Desktop\HOSEO_UNIV\자료구조\Study_files\25_1_Data_structure\Data_Structures\20240969_SingleLL_report1.c(15,1): warning C4716: 'insertLast': 값을 반환해야 합니다.
   Data_Structures.vcxproj -> C:\Users\HOSEO\Desktop\HOSEO_UNIV\자료구조\Study_files\25_1_Data_structure\x64\Debug\Data_Structures.exe
