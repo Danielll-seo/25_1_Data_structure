@@ -48,6 +48,9 @@
     <ClCompile Include="20240969_Tree_report1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Heap_build.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stack.h">

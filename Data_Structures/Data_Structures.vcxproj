@@ -158,6 +158,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="20240969_Tree_report1.c" />
+    <ClCompile Include="Heap_build.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stack.h" />
