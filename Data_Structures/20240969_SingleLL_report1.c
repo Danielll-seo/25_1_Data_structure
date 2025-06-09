@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,88 +8,151 @@ typedef struct Node {
 	struct Node* next;	// 다음 노드의 포인터
 } Node;
 
-// 마지막에 노드 추가 함수
-Node* insertLast(Node* head, int data) {
-	// 새로운 노드 생성
-	Node* newNode = (Node*)malloc(sizeof(Node));
-
-}
-
 // 첫 번째 노드 삽입 함수
 Node* insertFirst(Node* head, int data) {
-	// 새로운 노드 생성
 	Node* newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = data;
-	newNode->next = NULL; // 새로운 노드는 초기에는 아무것도 가리키지 않음
+	newNode->next = NULL;
 
-	// Head가 NULL인 경우(리스트가 비어 있음)
 	if (head == NULL) {
-		return newNode; // 새노드가 리스트의 시작점
+		return newNode;
 	}
-
-	// Head가 NULL이 아닌 경우 (리스트에 기존 노드가 있음)
-	newNode->next = head; // 새 노드의 다음을 기존 Head로 연결
-	return newNode;		  // 새 노드를 Head로 설정
+	newNode->next = head;
+	return newNode;
 }
 
-// 마지막 노드 추가 함수
+// 마지막 노드 삽입 함수
 Node* insertLast(Node* head, int data) {
-	// 새로운 노드 생성
 	Node* newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = data;
-	newNode->next = NULL; // 새 노드는 리스트의 끝을 나타냄
+	newNode->next = NULL;
 
-	// 리스트가 비어 있는 경우
 	if (head == NULL) {
-		return newNode; // 새 노드가 리스트의 시작점이 됨
+		return newNode;
 	}
 
-	// 리스트에 기존 노드가 있는 경우
 	Node* current = head;
-	while (current->next != NULL) {	// 마지막 노드를 찾음
+	while (current->next != NULL) {
 		current = current->next;
 	}
-	current->next = newNode; // 마지막 노드의 next에 새 노드를 연결
+	current->next = newNode;
 
-	return head; // 리스트의 시작점(head) 반환
+	return head;
 }
 
-// 리스트의 특정 위치에 삽입
+// 특정 값을 가진 노드 뒤에 삽입
 void insertAfterValue(Node* head, int targetValue, int newData) {
 	Node* current = head;
 
-	// 노드 탐색
 	while (current != NULL) {
 		if (current->data == targetValue) {
-			// 새 노드 생성 및 삽입
+			Node* newNode = (Node*)malloc(sizeof(Node));
+			newNode->data = newData;
+			newNode->next = current->next;
+			current->next = newNode;
+			return;
 		}
+		current = current->next;
 	}
+
+	printf("값 %d를 가진 노드를 찾을 수 없습니다. 삽입하지 않습니다.\n", targetValue);
 }
 
-int main() {
-	// 연결 리스트 초기화(head를 NULL로 초기화 한다.)
-	Node* head = NULL;
+// 마지막 노드 삭제 함수
+Node* deleteLast(Node* head) {
+	if (head == NULL) {
+		printf("리스트가 비어 있습니다. 삭제할 노드가 없습니다.\n");
+		return NULL;
+	}
 
+	if (head->next == NULL) {
+		free(head);
+		return NULL;
+	}
 
-	// 노드 삽입
-	head = insertFirst(head, 10); // 첫 번째 노드 삽입
-	head = insertFirst(head, 20); // 두 번째 노드 삽입
-	head = insertFirst(head, 30); // 세 번째 노드 삽입
+	Node* current = head;
+	while (current->next->next != NULL) {
+		current = current->next;
+	}
 
-	// 리스트 출력
+	free(current->next);
+	current->next = NULL;
+
+	return head;
+}
+
+// 헤드 노드 삭제 함수
+Node* deleteHead(Node* head) {
+	if (head == NULL) {
+		printf("리스트가 비어 있습니다. 삭제할 노드가 없습니다.\n");
+		return NULL;
+	}
+
+	Node* temp = head;
+	head = head->next;
+	free(temp);
+
+	return head;
+}
+
+// 특정 값의 노드 삭제 함수
+Node* deleteNode(Node* head, int targetValue) {
+	if (head == NULL) {
+		printf("리스트가 비어 있습니다. 삭제할 노드가 없습니다.\n");
+		return NULL;
+	}
+
+	if (head->data == targetValue) {
+		Node* temp = head;
+		head = head->next;
+		free(temp);
+		return head;
+	}
+
+	Node* current = head;
+	while (current->next != NULL && current->next->data != targetValue) {
+		current = current->next;
+	}
+
+	if (current->next == NULL) {
+		printf("값 %d를 가진 노드를 찾을 수 없습니다.\n", targetValue);
+		return head;
+	}
+
+	Node* temp = current->next;
+	current->next = current->next->next;
+	free(temp);
+
+	return head;
+}
+
+// 리스트 출력 함수
+void printList(Node* head) {
 	Node* current = head;
 	while (current != NULL) {
 		printf("%d -> ", current->data);
 		current = current->next;
 	}
 	printf("NULL\n");
+}
 
-	// 초기상태 출력
-	/*
-	if (head == NULL) {
-		printf("리스트가 초기화 되었습니다. 현재 리스트는 비어있습니다.\n");
-	}
-	*/
+// 메인 함수
+int main() {
+	Node* head = NULL;
+
+	// 노드 삽입
+	head = insertFirst(head, 30);
+	head = insertFirst(head, 20);
+	head = insertFirst(head, 10);
+	head = insertLast(head, 70);
+	head = insertLast(head, 80);
+	head = insertLast(head, 90);
+	insertAfterValue(head, 30, 40);
+	insertAfterValue(head, 40, 50);
+	insertAfterValue(head, 50, 60);
+
+	// 리스트 출력
+	printList(head);
 
 	return 0;
 }
